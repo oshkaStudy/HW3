@@ -31,6 +31,7 @@ replay_pid*
 .gradle
 **/build/
 !src/**/build/
+gradle/
 
 # Ignore Gradle GUI config
 gradle-app.setting
@@ -55,6 +56,7 @@ gradle-app.setting
 *.hprof
 
 ### IntelliJ IDEA ###
+idea/
 .idea/modules.xml
 .idea/jarRepositories.xml
 .idea/compiler.xml
