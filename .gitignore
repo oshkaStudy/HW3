@@ -57,6 +57,7 @@ gradle-app.setting
 
 ### IntelliJ IDEA ###
 idea/
+.idea/
 .idea/modules.xml
 .idea/jarRepositories.xml
 .idea/compiler.xml

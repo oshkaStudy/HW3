@@ -1,4 +1,5 @@
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Condition.text;
@@ -9,7 +10,7 @@ import static com.codeborne.selenide.Selenide.*;
 public class DemoqaTest {
 
     @BeforeAll
-    public static void beforeAll() {
+    public static void setupConfig() {
         Configuration.browserSize = "1920x1080";
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.pageLoadStrategy = "eager";
@@ -18,6 +19,9 @@ public class DemoqaTest {
     @Test
     public void fillFormTest() {
         open("/automation-practice-form");
+
+        executeJavaScript("$('#fixedban').remove()");
+        executeJavaScript("$('footer').remove()");
 
         //Простые инпуты и радио-баттон
         $("#firstName").setValue("Petr");
